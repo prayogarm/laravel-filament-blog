@@ -1,4 +1,71 @@
-<x-blog-layout>
+@extends ('layout.app')
+
+@section('content')
+    <div class="inner-banner">
+        <section class="w3l-breadcrumb">
+            <div class="container">
+                <ul class="breadcrumbs-custom-path">
+                    <li><a href="{{ route('filamentblog.post.index') }}/">Home</a></li>
+                    <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>Blog</li>
+                    <li class="active"><span title="{{ $post->title }}" class="fa fa-chevron-right mx-2" aria-hidden="true"></span>{{ $post->title }}</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <div style="margin: 8px auto; display: block; text-align:center;"></div>
+    
+    <section class="text-11 pb-5">
+        <div class="text11 pb-md-5 pb-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 text11-content m-auto">
+                        <img src="{{ $post->featurePhoto  }}" class="img-fluid img-responsive" alt="{{ $post->photo_alt_text }}" />
+                        <h4>{{ $post->title }}</h4>
+                        <h6><span title="{{ $post->user->name() }}" class="fa fa-user mr-1"></span>{{ $post->user->name() }}</h6>
+                        @foreach ($post->categories as $category)
+                            <a href="{{ route('filamentblog.category.post', ['category' => $category->slug]) }}" class="post"> > {{ $category->name }}</a>
+                        @endforeach 
+                        
+                        <p class="mt-4 mb-3">{{ $post->sub_title }}</p>
+                        <article class="m-auto leading-6">
+                            {!! tiptap_converter()->asHTML($post->body, toc: true, maxDepth: 3) !!}
+                        </article>
+
+                        @if($post->tags->count())
+                            <div class="pt-10">
+                                <h5 class="mb-3 block font-semibold">Tags :</h5>
+                                <div class="space-x-2 space-y-1">
+                                    @foreach ($post->tags as $tag)
+                                    <a href="{{ route('filamentblog.tag.post', ['tag' => $tag->slug]) }}" class="rounded-full border border-slate-300 px-3 py-1 text-sm font-medium font-medium text-black text-slate-600 hover:bg-slate-100">
+                                        {{ $tag->name }}
+                                    </a>
+                                    @endforeach
+                                </div>
+                            </div>
+                        @endif
+
+                        <div class="social-share-blog mt-4 pb-4">
+                            <ul class="column3 social m-0 p-0">
+                                <li>
+                                    <p class="m-0 mr-4">Share this post :</p>
+                                </li>
+                                <li><a href="#facebook" class="facebook"><span class="fa fa-facebook"></span></a></li>
+                                <li><a href="#twitter" class="twitter"><span class="fa fa-twitter"></span></a></li>
+                                <li><a href="#instagram" class="instagram"><span class="fa fa-instagram"></span></a>
+                                </li>
+                                <li><a href="#linkedin" class="linkedin"><span class="fa fa-linkedin"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //single post -->
+@endsection
+
+{{-- <x-blog-layout>
     <section class="pb-16">
         <div class="container mx-auto">
             <div class="mb-10 flex gap-x-2 text-sm font-semibold">
@@ -37,7 +104,7 @@
                                     <h1 class="mb-6 text-4xl font-semibold">
                                         {{ $post->title }}
                                     </h1>
-                                    <p>{{ $post->sub_title }}</p>
+                                    <p>x`</p>
                                     <div class="mt-2">
                                         @foreach ($post->categories as $category)
                                         <a href="{{ route('filamentblog.category.post', ['category' => $category->slug]) }}">
@@ -110,13 +177,6 @@
                         @endif
                         <x-blog-comment :post="$post" />
                     </div>
-                    <div>
-                        {{-- Ads Section            --}}
-                        {{-- <div--}}
-                        {{-- class="sticky top-24 flex h-[600px] w-[160px] items-center justify-center overflow-hidden rounded bg-slate-200 font-medium text-slate-500/20">--}}
-                        {{-- <span>ADS</span>--}}
-                        {{-- </div>--}}
-                    </div>
                 </div>
             </div>
 
@@ -152,4 +212,4 @@
         </div>
     </section>
     {!! $shareButton?->script_code !!}
-</x-blog-layout>
+</x-blog-layout> --}}

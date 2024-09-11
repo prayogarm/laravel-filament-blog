@@ -3,8 +3,7 @@
         <div class="max-h-[65vh] list-none overflow-y-auto transition-all duration-300 translate-y-0 opacity-100">
             @foreach($categories as $category)
                 <a href="{{ route('filamentblog.category.post', ['category' => $category->slug]) }}"
-                   class="py-2 block text-sm font-medium transition-all duration-300 cursor-pointer hover:text-primary-600 px-6 capitalize"
-                >
+                   class="py-2 block text-sm font-medium transition-all duration-300 cursor-pointer hover:text-primary-600 px-6 capitalize">
                     {{ $category->name }}
                 </a>
             @endforeach
