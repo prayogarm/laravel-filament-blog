@@ -21,6 +21,101 @@
     </section>
     <!-- //banner section -->
 
+    <section class="d-flex justify-content-center py-5">
+        <div class="container py-md-5 py-4">
+            <div class="row justify-content-center text-center">
+                <div class="col-md-8">
+                    <div class="section-heading mb-sm-5 mb-3">
+                        <h3 class="title-style mb-2">Desain Interior Sesuai Ruangan</h3>
+                        <p class="lead">
+                            Koleksi inspirasi desain interior terbaik oleh tim profesional Home Interior Project
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row py-sm-3">
+                <div class="col-md-4 mt-md-0 mb-4 col-6 p-2">
+                    <div class="card shadow-sm">
+                        <a href="#"> <img class="img-fluid img-responsive" style="max-height: 250px;" src={{asset("images/9.jpg")}} alt="#" /></a>
+                        <div class="card-body">
+                            <div class="news-title">
+                                <h4 class="title-small">
+                                    <a style="color: black; font-weight:600" href="#">Kitchen Set</a>
+                                </h4>
+                                <p class="des mt-2 mb-2">Desain dapur modern dengan kualitas premium.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-md-0 mb-4 col-6 p-2">
+                    <div class="card shadow-sm">
+                        <a href="#"> <img class="img-fluid img-responsive" style="max-height: 250px;" src={{asset("images/9.jpg")}} alt="#" /></a>
+                        <div class="card-body">
+                            <div class="news-title">
+                                <h4 class="title-small">
+                                    <a style="color: black; font-weight:600" href="#">Lemari Custom</a>
+                                </h4>
+                                <p class="des mt-2 mb-2">Desain dapur modern dengan kualitas premium.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-md-0 mb-4 col-6 p-2">
+                    <div class="card shadow-sm">
+                        <a href="#"> <img class="img-fluid img-responsive" style="max-height: 250px;" src={{asset("images/9.jpg")}} alt="#" /></a>
+                        <div class="card-body">
+                            <div class="news-title">
+                                <h4 class="title-small">
+                                    <a style="color: black; font-weight:600" href="#">Backdrop TV</a>
+                                </h4>
+                                <p class="des mt-2 mb-2">Desain dapur modern dengan kualitas premium.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-md-0 mb-4 col-6 p-2">
+                    <div class="card shadow-sm">
+                        <a href="#"> <img class="img-fluid img-responsive" style="max-height: 250px;" src={{asset("images/9.jpg")}} alt="#" /></a>
+                        <div class="card-body">
+                            <div class="news-title">
+                                <h4 class="title-small">
+                                    <a style="color: black; font-weight:600" href="#">Kamar Set</a>
+                                </h4>
+                                <p class="des mt-2 mb-2">Desain dapur modern dengan kualitas premium.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-md-0 mb-4 col-6 p-2">
+                    <div class="card shadow-sm">
+                        <a href="#"> <img class="img-fluid img-responsive" style="max-height: 250px;" src={{asset("images/9.jpg")}} alt="#" /></a>
+                        <div class="card-body">
+                            <div class="news-title">
+                                <h4 class="title-small">
+                                    <a style="color: black; font-weight:600" href="#">Sekat Ruangan</a>
+                                </h4>
+                                <p class="des mt-2 mb-2">Desain dapur modern dengan kualitas premium.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-md-0 mb-4 col-6 p-2">
+                    <div class="card shadow-sm">
+                        <a href="#"> <img class="img-fluid img-responsive" style="max-height: 250px;" src={{asset("images/9.jpg")}} alt="#" /></a>
+                        <div class="card-body">
+                            <div class="news-title">
+                                <h4 class="title-small">
+                                    <a style="color: black; font-weight:600" href="#">Lihat Lainnya..</a>
+                                </h4>
+                                <p class="des mt-2 mb-2">Desain dapur modern dengan kualitas premium.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- banner bottom section -->
     <section class="w3l-aboutblock py-5">
         <div class="container py-md-5 py-sm-4">

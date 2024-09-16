@@ -1,0 +1,23 @@
+@media (max-width: 480px) {
+    .card .card-body {
+      flex: 1 1 auto;
+      min-height: 1px;
+      padding: 0.5rem;
+    }
+  
+    h4,
+    .h4 {
+      font-size: calc(14px);
+      font-weight: 600;
+    }
+  
+    a {
+      color: #000;
+    }
+  
+    .des {
+      font-size: 10px;
+      line-height: 15px;
+    }
+}
+  

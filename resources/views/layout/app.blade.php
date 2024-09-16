@@ -19,6 +19,7 @@
     <!-- //google-fonts -->
     <!-- Template CSS Style link -->
     <link rel="stylesheet" href={{asset("css/style-liberty.css")}}>
+    <link rel="stylesheet" href={{asset("css/custom.css")}}>
     {!! \Firefly\FilamentBlog\Facades\SEOMeta::generate() !!}
     <meta name="facebook-domain-verification" content="e03z09udnjh6mq79evvwam50ewak7j"/>
     <!-- Meta Pixel Code -->
