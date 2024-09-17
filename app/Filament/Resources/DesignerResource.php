@@ -19,6 +19,8 @@ class DesignerResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-user-group';
 
+    protected static ?string $navigationGroup = 'Portfolio Management';
+
     public static function form(Form $form): Form
     {
         return $form

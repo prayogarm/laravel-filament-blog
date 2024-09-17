@@ -34,84 +34,21 @@
                 </div>
             </div>
             <div class="row py-sm-3">
-                <div class="col-md-4 mt-md-0 mb-4 col-6 p-2">
-                    <div class="card shadow-sm">
-                        <a href="#"> <img class="img-fluid img-responsive" style="max-height: 250px;" src={{asset("images/9.jpg")}} alt="#" /></a>
-                        <div class="card-body">
-                            <div class="news-title">
-                                <h4 class="title-small">
-                                    <a style="color: black; font-weight:600" href="#">Kitchen Set</a>
-                                </h4>
-                                <p class="des mt-2 mb-2">Desain dapur modern dengan kualitas premium.</p>
+                @foreach ($kategori as $row)
+                    <div class="col-md-4 mt-md-0 mb-4 col-6 p-2">
+                        <div class="card shadow-sm">
+                            <a href="#"> <img class="img-fluid img-responsive" style="max-height: 250px;" src="{{ asset("storage/$row->cover") }}" alt="" /></a>
+                            <div class="card-body">
+                                <div class="news-title">
+                                    <h4 class="title-small">
+                                        <a style="color: black; font-weight:600" href="{{ route('category.portfolio', $row->slug) }}">{{ $row->name }}</a>
+                                    </h4>
+                                    <p class="des mt-2 mb-2">{{$row->desc}}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 mt-md-0 mb-4 col-6 p-2">
-                    <div class="card shadow-sm">
-                        <a href="#"> <img class="img-fluid img-responsive" style="max-height: 250px;" src={{asset("images/9.jpg")}} alt="#" /></a>
-                        <div class="card-body">
-                            <div class="news-title">
-                                <h4 class="title-small">
-                                    <a style="color: black; font-weight:600" href="#">Lemari Custom</a>
-                                </h4>
-                                <p class="des mt-2 mb-2">Desain dapur modern dengan kualitas premium.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mt-md-0 mb-4 col-6 p-2">
-                    <div class="card shadow-sm">
-                        <a href="#"> <img class="img-fluid img-responsive" style="max-height: 250px;" src={{asset("images/9.jpg")}} alt="#" /></a>
-                        <div class="card-body">
-                            <div class="news-title">
-                                <h4 class="title-small">
-                                    <a style="color: black; font-weight:600" href="#">Backdrop TV</a>
-                                </h4>
-                                <p class="des mt-2 mb-2">Desain dapur modern dengan kualitas premium.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mt-md-0 mb-4 col-6 p-2">
-                    <div class="card shadow-sm">
-                        <a href="#"> <img class="img-fluid img-responsive" style="max-height: 250px;" src={{asset("images/9.jpg")}} alt="#" /></a>
-                        <div class="card-body">
-                            <div class="news-title">
-                                <h4 class="title-small">
-                                    <a style="color: black; font-weight:600" href="#">Kamar Set</a>
-                                </h4>
-                                <p class="des mt-2 mb-2">Desain dapur modern dengan kualitas premium.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mt-md-0 mb-4 col-6 p-2">
-                    <div class="card shadow-sm">
-                        <a href="#"> <img class="img-fluid img-responsive" style="max-height: 250px;" src={{asset("images/9.jpg")}} alt="#" /></a>
-                        <div class="card-body">
-                            <div class="news-title">
-                                <h4 class="title-small">
-                                    <a style="color: black; font-weight:600" href="#">Sekat Ruangan</a>
-                                </h4>
-                                <p class="des mt-2 mb-2">Desain dapur modern dengan kualitas premium.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mt-md-0 mb-4 col-6 p-2">
-                    <div class="card shadow-sm">
-                        <a href="#"> <img class="img-fluid img-responsive" style="max-height: 250px;" src={{asset("images/9.jpg")}} alt="#" /></a>
-                        <div class="card-body">
-                            <div class="news-title">
-                                <h4 class="title-small">
-                                    <a style="color: black; font-weight:600" href="#">Lihat Lainnya..</a>
-                                </h4>
-                                <p class="des mt-2 mb-2">Desain dapur modern dengan kualitas premium.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

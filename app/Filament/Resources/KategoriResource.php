@@ -37,6 +37,13 @@ class KategoriResource extends Resource
                     ->disabled()
                     ->maxLength(255)
                     ->unique(ignoreRecord: true),
+                Forms\Components\Textarea::make('desc')
+                    ->required(),
+                Forms\Components\FileUpload::make('cover')
+                    ->label('Cover Image')
+                    ->image()
+                    ->directory('images/cover') // Directory to store the cover images
+                    ->required(),
             ]);
     }
 
@@ -46,6 +53,7 @@ class KategoriResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name')->sortable(),
                 Tables\Columns\TextColumn::make('slug')->sortable(),
+                Tables\Columns\TextColumn::make('desc')->sortable(),
                 Tables\Columns\TextColumn::make('created_at')->dateTime(),
             ])
             ->filters([
