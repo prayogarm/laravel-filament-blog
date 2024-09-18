@@ -16,13 +16,18 @@ class Portfolio extends Model
         'description', 
         'type', 
         'size', 
+        'jumlah_ruangan', 
         'location', 
         'cover', 
-        'images' 
+        'images', 
+        'gambar_hasil', 
+        'before_after' 
     ];
     
     protected $casts = [
         'images' => 'array',
+        'gambar_hasil' => 'array',
+        'before_after' => 'array',
     ];
 
     public function kategori(){

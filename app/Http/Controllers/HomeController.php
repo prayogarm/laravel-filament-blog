@@ -15,8 +15,9 @@ class HomeController extends Controller
     }
 
     public function produk()
-    {        
-        return view('home.product');
+    {       
+        $kategori = Kategori::orderby('id', 'asc')->get();
+        return view('home.product', compact('kategori'));
     }
 
     public function layanan()
@@ -27,5 +28,10 @@ class HomeController extends Controller
     public function kontak()
     {        
         return view('home.contact');
+    }
+
+    public function promo()
+    {        
+        return view('home.promo');
     }
 }

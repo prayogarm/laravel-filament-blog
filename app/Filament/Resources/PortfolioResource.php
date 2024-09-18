@@ -40,19 +40,35 @@ class PortfolioResource extends Resource
                     ->required(),
                 Forms\Components\TextInput::make('size')
                     ->required(),
+                Forms\Components\TextInput::make('jumlah_ruangan')
+                    ->required(),
                 Forms\Components\TextInput::make('location')
                     ->required(),
                 Forms\Components\FileUpload::make('cover')
                     ->label('Cover Image')
                     ->image()
-                    ->directory('images/portfolio-covers') // Directory to store the cover images
+                    ->directory('images/portfolio-covers')
                     ->required(),
                 Forms\Components\FileUpload::make('images')
                     ->label('Portfolio Images')
-                    ->multiple() // Allow multiple files
+                    ->multiple()
                     ->image()
-                    ->directory('images/portfolio-images') // Directory to store multiple images
-                    ->maxFiles(10) // Set limit to max 10 files
+                    ->directory('images/portfolio-images')
+                    ->maxFiles(10)
+                    ->nullable(),
+                Forms\Components\FileUpload::make('gambar_hasil')
+                    ->label('Gambar Hasil')
+                    ->multiple()
+                    ->image()
+                    ->directory('images/gambar-hasil')
+                    ->maxFiles(10)
+                    ->nullable(),
+                Forms\Components\FileUpload::make('before_after')
+                    ->label('Gambar Sebelum & Sesudah')
+                    ->multiple()
+                    ->image()
+                    ->directory('images/gambar-before-after')
+                    ->maxFiles(10)
                     ->nullable(),
             ]);
     }

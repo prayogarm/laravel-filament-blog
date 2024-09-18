@@ -18,38 +18,16 @@
     <section class="w3l-grids-6 py-5">
         <div class="container py-md-5 py-4">
             <div class="row text-center justify-content-center">
-                <div class="col-md-3 col-sm-6 ">
-                    <div class="gd-innf">
-                        <a href="services.html"><img class="img-fluid img-responsive" src={{asset("images/9.jpg")}}
-                                alt=" "></a>
-                        <h3> <a href="services.html" class="link-text">Kitchen Set</a></h3>
-                        <a href="services.html" class="btn blog-btn mt-2">Desain dapur modern dengan kualitas terbaik</a>
+                @foreach ($kategori as $row)
+                    <div class="col-md-3 col-sm-6 ">
+                        <div class="gd-innf">
+                            <a href="{{ route('category.portfolio', $row->slug) }}"><img class="img-fluid img-responsive" src={{ asset("storage/$row->cover") }}
+                                    alt=" "></a>
+                            <h3> <a href="{{ route('category.portfolio', $row->slug) }}" class="link-text">{{ $row->name }}</a></h3>
+                            <a href="{{ route('category.portfolio', $row->slug) }}" class="btn blog-btn mt-2">{{ $row->desc }}</a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-3 col-sm-6 mt-sm-0 mt-5 ">
-                    <div class="gd-innf">
-                        <a href="services.html"><img class="img-fluid img-responsive" src={{asset("images/1.jpg")}}
-                                alt=" "></a>
-                        <h3><a href="services.html" class="link-text">Backdrop TV</a></h3>
-                        <a href="services.html" class="btn blog-btn mt-2">Buat setiap momen menonton menjadi lebih istimewa</a>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 mt-md-0 mt-5 ">
-                    <div class="gd-innf">
-                        <a href="services.html"><img class="img-fluid img-responsive" src={{asset("images/7.jpg")}}
-                                alt=" "></a>
-                        <h3><a href="services.html" class="link-text">Kamar Set</a></h3>
-                        <a href="services.html" class="btn blog-btn mt-2">Wujudkan suasana tidur yang elegan dan menenangkan</a>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 mt-md-0 mt-5 ">
-                    <div class="gd-innf">
-                        <a href="services.html"><img class="img-fluid img-responsive" src={{asset("images/2.jpg")}}
-                                alt=" "></a>
-                        <h3><a href="services.html" class="link-text">Lemari Bawah Tangga</a></h3>
-                        <a href="services.html" class="btn blog-btn mt-2">Wujudkan ruang bawah tangga sesuai kebutuhanmu</a>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

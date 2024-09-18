@@ -37,7 +37,7 @@
                 @foreach ($kategori as $row)
                     <div class="col-md-4 mt-md-0 mb-4 col-6 p-2">
                         <div class="card shadow-sm">
-                            <a href="#"> <img class="img-fluid img-responsive" style="max-height: 250px;" src="{{ asset("storage/$row->cover") }}" alt="" /></a>
+                            <a href="{{ route('category.portfolio', $row->slug) }}"> <img class="img-fluid img-responsive" style="max-height: 250px;" src="{{ asset("storage/$row->cover") }}" alt="" /></a>
                             <div class="card-body">
                                 <div class="news-title">
                                     <h4 class="title-small">
@@ -54,7 +54,7 @@
     </section>
 
     <!-- banner bottom section -->
-    <section class="w3l-aboutblock py-5">
+    <section class="w3l-aboutblock py-3">
         <div class="container py-md-5 py-sm-4">
             <div class="row">
                 <div class="col-lg-5 left-wthree-img mb-lg-0 mb-5">
@@ -136,7 +136,7 @@
                         <li class="ml-3 light-color"><del>Rp 2.200.000</del></li>
                     </ul>
                     <div class="mt-5">
-                        <a href="promo.html" class="btn btn-style">Dapatkan Diskon</a>
+                        <a href="{{route("promo")}}" class="btn btn-style">Dapatkan Diskon</a>
                     </div>
                 </div>
             </div>

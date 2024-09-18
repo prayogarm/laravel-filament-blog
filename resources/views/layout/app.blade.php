@@ -20,6 +20,8 @@
     <!-- Template CSS Style link -->
     <link rel="stylesheet" href={{asset("css/style-liberty.css")}}>
     <link rel="stylesheet" href={{asset("css/custom.css")}}>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     {!! \Firefly\FilamentBlog\Facades\SEOMeta::generate() !!}
     <meta name="facebook-domain-verification" content="e03z09udnjh6mq79evvwam50ewak7j"/>
     <!-- Meta Pixel Code -->
@@ -68,8 +70,8 @@
                         <li class="nav-item {{ (request()->is('produk')) ? 'active' : '' }}">
                             <a class="nav-link" href={{route("produk")}}>Produk</a>
                         </li>
-                        <li class="nav-item {{ (request()->is('layanan')) ? 'active' : '' }}">
-                            <a class="nav-link" href={{route("layanan")}}>Layanan</a>
+                        <li class="nav-item {{ (request()->is('portfolio')) ? 'active' : '' }}">
+                            <a class="nav-link" href={{route("portfolio.index")}}>Portfolio</a>
                         </li>
                         <li class="nav-item {{ (request()->is('blogs')) ? 'active' : '' }}">
                             <a class="nav-link" href={{ route('filamentblog.post.index') }}>Arktikel</a>

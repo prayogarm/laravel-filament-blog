@@ -25,4 +25,9 @@ class PortfolioController extends Controller
             'kategori' => $kategori
         ]);
     }
+
+    public function detail(Portfolio $portfolio)
+    {
+        return view('portfolio.detail', compact('portfolio'));
+    }
 }

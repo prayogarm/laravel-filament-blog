@@ -21,8 +21,11 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('produk', [HomeController::class, 'produk'])->name('produk');
 Route::get('layanan', [HomeController::class, 'layanan'])->name('layanan');
 Route::get('kontak', [HomeController::class, 'kontak'])->name('kontak');
+Route::get('promo', [HomeController::class, 'promo'])->name('promo');
 
 // Portfolio
-Route::get('/category/{slug}', [PortfolioController::class, 'show'])->name('category.portfolio');
-
 Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio.index');
+Route::get('/category/{slug}', [PortfolioController::class, 'show'])->name('category.portfolio');
+Route::get('/portfolio/{portfolio}', [PortfolioController::class, 'detail'])->name('portfolio.detail');
+
+
