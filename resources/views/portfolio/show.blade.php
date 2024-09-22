@@ -34,7 +34,7 @@
                         <div class="card-body">
                             <div class="news-title">
                                 <h4 class="title-small">
-                                    <a href="blog-single.html">{{$row->title}}</a>
+                                    <a href="{{ route('portfolio.detail', $row->id) }}">{{$row->title}}</a>
                                 </h4>
                                 <p class="mt-2 mb-4">{{ $kategori->name }} · {{$row->size}}m² · {{$row->jumlah_ruangan}} Ruangan</p>
                             </div>

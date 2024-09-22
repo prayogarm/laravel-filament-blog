@@ -7,7 +7,7 @@
             <div class="container">
                 <h4 class="inner-text-title font-weight-bold mb-2">PRODUK BERKUALITAS</h4>
                 <ul class="breadcrumbs-custom-path">
-                    <li><a href="index.html">PT Home Interior Project</a></li>
+                    <li><a href="#">PT Home Interior Project</a></li>
                 </ul>
             </div>
         </div>
