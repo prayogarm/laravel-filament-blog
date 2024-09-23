@@ -10,11 +10,11 @@ class VisitShowroom extends Model
     use HasFactory;
 
     protected $fillable = [
-        'project_id', 'consultation_status', 'booking_fee','tau_hip_dari','rating_maps', 'notes'
+        'client_id', 'consultation_status', 'booking_fee','tau_hip_dari','rating_maps', 'notes'
     ];
 
-    public function project()
+    public function client()
     {
-        return $this->belongsTo(Project::class);
+        return $this->belongsTo(Client::class);
     }
 }

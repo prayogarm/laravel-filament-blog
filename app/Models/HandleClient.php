@@ -10,7 +10,7 @@ class HandleClient extends Model
     use HasFactory;
 
     protected $fillable = [
-        'project_id', 'follow_up_1', 'follow_up_2', 'follow_up_3', 'follow_up_4',
+        'client_id', 'follow_up_1', 'follow_up_2', 'follow_up_3', 'follow_up_4',
         'status_follow_up', 'booking_fee', 'notes'
     ];
 
@@ -22,8 +22,8 @@ class HandleClient extends Model
         'booking_fee' => 'boolean',
     ];
 
-    public function project()
+    public function client()
     {
-        return $this->belongsTo(Project::class);
+        return $this->belongsTo(Client::class);
     }
 }

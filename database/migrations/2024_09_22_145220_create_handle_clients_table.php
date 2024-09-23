@@ -18,7 +18,16 @@ return new class extends Migration
             $table->date('follow_up_2')->nullable();
             $table->date('follow_up_3')->nullable();
             $table->date('follow_up_4')->nullable();
-            $table->enum('status_follow_up', ['pending', 'in_progress', 'completed'])->default('pending');
+            $table->enum('status_follow_up', [  'pending', 
+                                                'no_respond', 
+                                                'no_budget', 
+                                                'home_progress', 
+                                                'price', 
+                                                'just_asking',
+                                                'in_progress', 
+                                                'visit',
+                                                'survey'
+                                             ])->default('pending');
             $table->boolean('booking_fee')->default(false);
             $table->text('notes')->nullable();
             $table->timestamps();

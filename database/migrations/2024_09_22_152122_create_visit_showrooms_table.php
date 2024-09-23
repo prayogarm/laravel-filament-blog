@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('visit_showrooms', function (Blueprint $table) {
             $table->id();
             $table->foreignId('project_id')->constrained()->onDelete('cascade');
-            $table->enum('consultation_status', ['scheduled', 'completed', 'cancelled'])->default('scheduled');
+            $table->enum('consultation_status', ['pending', 'survey', 'just_asking'])->default('pending');
             $table->boolean('booking_fee')->default(false);
             $table->string('tau_hip_dari')->nullable();
             $table->string('rating_maps')->nullable();

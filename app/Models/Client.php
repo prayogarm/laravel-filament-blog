@@ -9,10 +9,19 @@ class Client extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'address','city', 'phone', 'sumber'];
+    protected $fillable = ['name', 'address','city', 'phone', 'sumber', 'project'];
 
-    public function projects()
+    protected $casts = [
+        'project' => 'array',
+    ];
+
+    public function handleClient()
     {
-        return $this->hasMany(Project::class);
+        return $this->hasOne(HandleClient::class);
+    }
+
+    public function visitShowroom()
+    {
+        return $this->hasOne(VisitShowroom::class);
     }
 }
